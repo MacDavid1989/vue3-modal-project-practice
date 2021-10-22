@@ -1,11 +1,17 @@
 <template>
   <div class="backdrop">
     <div class="modal">
-      <h1>Modal Title</h1>
+      <h1>{{ header }}</h1>
       <p>Modal Content</p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: ["header"],
+};
+</script>
 
 <style scoped>
 .modal {
@@ -23,7 +29,6 @@
   height: 100%;
 }
 h1 {
-  display: inline-block;
   color: aqua;
   border: none;
   padding: 0;
