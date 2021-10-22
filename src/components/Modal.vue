@@ -1,6 +1,9 @@
 <template>
   <div class="backdrop" @click.self="closeModal">
-    <div class="modal" :class="{ sale: theme == 'sale' }">
+    <div
+      class="modal"
+      :class="{ sale: theme == 'sale', congrats: theme == 'congrats' }"
+    >
       <slot>Default Content</slot>
       <div class="actions">
         <slot name="links"></slot>
@@ -40,6 +43,10 @@ export default {
   background: crimson;
   color: white;
 }
+.modal.congrats {
+  background: black;
+  color: blue;
+}
 .actions {
   text-align: center;
   margin: 30px 0 10px 0;
@@ -47,5 +54,8 @@ export default {
 }
 .modal.sale .actions {
   color: white;
+}
+.modal.congrats .actions {
+  color: blue;
 }
 </style>

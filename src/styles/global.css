@@ -36,3 +36,9 @@ h1 {
 .modal.sale .actions a {
   color: white;
 }
+.modal.congrats h1 {
+  color: blue;
+}
+.modal.congrats .actions a {
+  color: blue;
+}
