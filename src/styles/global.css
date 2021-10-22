@@ -1,3 +1,4 @@
+/* General Styles */
 body {
   margin: 0;
 }
@@ -13,4 +14,25 @@ h1 {
   border-bottom: 1px solid #ddd;
   display: inline-block;
   padding-bottom: 10px;
+}
+
+/* Modal Styles */
+.modal h1 {
+  color: aqua;
+  border: none;
+  padding: 0;
+}
+.modal .actions a {
+  color: #333;
+  padding: 8px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 10px;
+}
+.modal.sale h1 {
+  color: white;
+}
+.modal.sale .actions a {
+  color: white;
 }
