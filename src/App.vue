@@ -1,7 +1,7 @@
 <template>
   <h1>{{ title }}</h1>
   <p>{{ welcome }}</p>
-  <div v-if="showModal">
+  <teleport to="#modals" v-if="showModal">
     <Modal theme="sale" @close="toggleModal">
       <h1>Ninja Giveaway!</h1>
       <p>Grab your ninja swag for half price!</p>
@@ -10,9 +10,8 @@
         <a href="#">More Info</a>
       </template>
     </Modal>
-  </div>
-  <button @click="toggleModal">Open Modal</button>
-  <div v-if="showCongratsModal">
+  </teleport>
+  <teleport to="#modals" v-if="showCongratsModal">
     <Modal theme="congrats" @close="toggleCongratsModal">
       <h1>Congratulations!</h1>
       <p>You're the lucky winner!</p>
@@ -21,7 +20,8 @@
         <a href="#">More Info</a>
       </template>
     </Modal>
-  </div>
+  </teleport>
+  <button @click="toggleModal">Open Modal</button>
   <button @click="toggleCongratsModal">Click Me</button>
 </template>
 
