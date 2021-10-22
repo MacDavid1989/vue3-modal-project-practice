@@ -5,6 +5,10 @@
     <Modal theme="sale" @close="toggleModal">
       <h1>Ninja Giveaway!</h1>
       <p>Grab your ninja swag for half price!</p>
+      <template v-slot:links>
+        <a href="#">Sign Up Now</a>
+        <a href="#">More Info</a>
+      </template>
     </Modal>
   </div>
   <button @click="toggleModal">Open Modal</button>
